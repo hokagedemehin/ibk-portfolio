@@ -37,20 +37,149 @@ font-family: 'Sora', sans-serif; */
 /* Extra Small devices */
 /* ####################################################################################################### */
 @media (max-width: 575.98px){
+/* ################ Nav Bar ########################## */
+.main-nav{
+    /* min-height: 800px; */
+}
+
+.scrolled .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+.nav-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 100%;
+   transition: 1s;
+   padding: 0 10px;
+   background: #000;
+}
+
+.scrolled {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.nav-container .banner-image {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+.nav-container .banner {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+.scrolled .banner {
+    opacity: 0.3;
+    height: 100px;
+}
+
+.links-container {
+    /* position: relative; */
+    /* display: flex;
+    justify-content: flex-end; */
+    height: 100px;
+    /* overflow: hidden; */
+    transition: 1s;
+}
+.links-container .links {
+    position: relative;
+    margin: 0;
+    padding: 2rem 0;
+    /* display: block; */
+    transition: 1s;
+    opacity: 0;
+    /* transform: translateX(20rem); */
+    visibility: hidden;
+}
+
+.scrolled .links-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.scrolled .links-container .links {
+    opacity: 1;
+    transform: translateX(0px);
+    visibility: visible;
+}
+
+
+.links-container .links li {
+    list-style: none;
+}
+
+.links-container .links .scroll-link {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+
+}
+
+.scrolled .links-container .links {
+    font-size: 0.5rem;
+    display: block;
+    /* color: red; */
+    visibility: visible;
+}
+
+
+/* ########### Hmaburger #################### */
+.scrolled .nav-toggle {
+    font-size: 2.5rem;
+    /* color: snow; */
+    /* background: transparent; */
+    /* border-color: transparent; */
+    transition: 1s;
+    cursor: pointer;
+}
+
+
 /* ######################################################################################### */
-    /* Center image */
+/* Center image and scrolled effect uner it */
 /* ######################################################################################### */
+
 .box{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 200px;
-    height: 300px;
-    /* background: #000; */
+    height: 250px;
+    background: #000;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,.3);
     overflow: hidden;
+    transition: 1s;
+}
+
+.scrolled .box {
+    /* opacity: 0;
+    visibility: hidden; */
+    /* position: relative; */
+    /* top: 50px;
+    left: 100px; */
+    transition: 1s;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* display: flex; */
+    /* justify-content: flex-end; */
 }
 
 .imgbox {
@@ -68,15 +197,30 @@ font-family: 'Sora', sans-serif; */
     transform: translateY(-100px);
 }
 
+.scrolled .imgbox:hover {
+    transform: translateY(0px);
+ }
+
 .imgbox img {
-    width: 400px;
-    height: 300px;
-    transform: translateX(-100px);
-    transition: 0.5s;
+    width: 250px;
+    height: 250px;
+    /* object-fit: contain; */
+    transform: translateX(-20px);
+    transition: 1s;
+}
+.scrolled .box .imgbox img{
+    width: 130px;
+    height: auto;
+    transform: translateX(-30px);
+    transition: 1s;
 }
 
 .box:hover .imgbox img {
     opacity: 0.5;
+}
+
+.scrolled .box:hover .imgbox img{
+    opacity: 1;
 }
 
 .social-icon {
@@ -90,6 +234,11 @@ font-family: 'Sora', sans-serif; */
     padding: 0;
 }
 
+.scrolled .social-icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .social-icon li{
     list-style: none;
 }
@@ -97,8 +246,8 @@ font-family: 'Sora', sans-serif; */
 .social-icon li a {
     position: relative;
     display: flex;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     justify-content: center;
     align-items: center;
     background: #fff;
@@ -108,16 +257,17 @@ font-family: 'Sora', sans-serif; */
     text-decoration: none;
     transition:  0.5s;
     transform: translateY(200px);
+    font-size: 0.5rem;
     opacity: 0;
-}
-
-.social-icon li a i {
-    font-size: 1rem;
 }
 
 .box:hover .social-icon li a {
     transform: translateY(0px);
     opacity: 1;
+}
+
+.scrolled .box:hover .social-icon li a {
+    opacity: 0;
 }
 
 .box:hover .social-icon li:nth-child(1) a {
@@ -139,9 +289,8 @@ font-family: 'Sora', sans-serif; */
 .box:hover .social-icon li:nth-child(5) a {
     transition-delay: 0.8s;
 }
-/* h2{color: #fff;} */
+
 .details {
-    /* z-index: 1223; */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -152,17 +301,23 @@ font-family: 'Sora', sans-serif; */
     box-sizing: border-box;
 }
 
+.scrolled .details {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .details h2 {
     margin: 10px 0 0;
     padding: 0;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .details h2 span {
     color: #bbb;
-    /* font-size: 1.2rem; */
+    font-size: 1rem;
 }
+
 
 }
 
@@ -430,126 +585,268 @@ font-family: 'Sora', sans-serif; */
 /* Large Devices (e.g Desktop) */
 /* ####################################################################################################### */
 @media (min-width: 992px) and (max-width:1199.98px) {
+
 /* ######################################################################################### */
-    /* Center image */
-    /* ######################################################################################### */
-    .box{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 400px;
-        height: 500px;
-        /* background: #000; */
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,.3);
-        overflow: hidden;
-    }
+/* Nav Bar */
+/* ######################################################################################### */
+
+.main-nav {
+    min-height: 1000px;
+}
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    transition: 1s;
+    padding: 0 10px;
+    /* background: #000; */
+ }
+ .scrolled {
+     display: flex;
+     height: auto;
+     justify-content: space-between;
+ }
+ .nav-container .banner-image {
+     object-fit: cover;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     transition: 1s;
+     /* z-index: -2; */
+ }
+
+ .scrolled .banner-image {
+     opacity: 0.3;
+     height: 100px;
+ }
+
+ .links-container {
+     position: relative;
+     display: flex;
+     justify-content: flex-end;
+ }
+ .links-container .links {
+     position: relative;
+     margin: 0;
+     padding: 2rem 0;
+     display: flex;
+     transition: 1s;
+     opacity: 0;
+     transform: translateX(20rem);
+     visibility: hidden;
+ }
+
+ .scrolled .links-container {
+     display: flex;
+     justify-content: flex-end;
+ }
+
+ .scrolled .links-container .links {
+     opacity: 1;
+     transform: translateX(0px);
+     visibility: visible;
+ }
+
+ .links-container .links li {
+     list-style: none;
+ }
+
+ .links-container .links .scroll-link {
+     color: #fff;
+     font-size: 1.5rem;
+     padding: 0.8rem 1rem;
+     text-decoration: none;
+
+ }
+
+
+ /* ########### Hmaburger #################### */
+ .scrolled .nav-toggle {
+     font-size: 2.5rem;
+     color: snow;
+     background: transparent;
+     border-color: transparent;
+     transition: 1s;
+     cursor: pointer;
+ }
+
+
+/* ######################################################################################### */
+/* Center image and scrolled effect uner it */
+/* ######################################################################################### */
+
+.box-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.box {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    transition: 0.5s;
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    background: #fff;
+    overflow: hidden;
+}
+
+.scrolled .box {
+    /* opacity: 0;
+    visibility: hidden; */
+    /* position: relative; */
+    top: 50px;
+    left: 100px;
+    transition: 1s;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.imgbox {
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    /* z-index: 3; */
+}
+
+.imgbox:hover{
+    transform: translateY(-100px);
     
-    .imgbox {
-        position: absolute;
-        transition: 0.5s;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        background: #000000;
+}
+
+.scrolled .imgbox:hover {
+    transform: translateY(0px);
     }
-    
-    .imgbox:hover {
-        transform: translateY(-100px);
-    }
-    
+
     .imgbox img {
-        width: 580px;
-        height: 500px;
-        transform: translateX(-100px);
-        transition: 0.5s;
-    }
-    
-    .box:hover .imgbox img {
-        opacity: 0.5;
-    }
-    
-    .social-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .social-icon li{
-        list-style: none;
-    }
-    
-    .social-icon li a {
-        position: relative;
-        display: flex;
-        width: 50px;
-        height: 50px;
-        justify-content: center;
-        align-items: center;
-        background: #fff;
-        color: #262626;
-        margin: 0 5px;
-        border-radius: 50%;
-        text-decoration: none;
-        transition:  0.5s;
-        transform: translateY(200px);
-        opacity: 0;
-    }
-    
-    .box:hover .social-icon li a {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    
-    .box:hover .social-icon li:nth-child(1) a {
-        transition-delay: 0s;
-    }
-    
-    .box:hover .social-icon li:nth-child(2) a {
-        transition-delay: 0.2s;
-    }
-    
-    .box:hover .social-icon li:nth-child(3) a {
-        transition-delay: 0.4s;
-    }
-    
-    .box:hover .social-icon li:nth-child(4) a {
-        transition-delay: 0.6s;
-    }
-    
-    .box:hover .social-icon li:nth-child(5) a {
-        transition-delay: 0.8s;
-    }
-    /* h2{color: #fff;} */
-    .details {
-        /* z-index: 1223; */
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: #fff;
-        width: 100%;
-        height: 100px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-    
-    .details h2 {
-        margin: 10px 0 0;
-        padding: 0;
-        text-align: center;
-    }
-    
-    .details h2 span {
-        color: #bbb;
-    }
+    width: auto;
+    height: 100%;
+    transform: translateX(-40px);
+    transition: 0.5s;
+}
+
+.scrolled .box .imgbox img{
+    width: 130px;
+    height: auto;
+    transform: translateX(-30px);
+    transition: 1s;
+}
+
+.box:hover .imgbox img {
+opacity: 0.5;
+transition: 0.5s;
+}
+
+.scrolled .box:hover .imgbox img{
+    opacity: 1;
+}
+
+.social-icon {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    border: 2px solid white;
+}
+
+.scrolled .social-icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.social-icon li{
+    list-style: none;
+}
+
+.social-icon li a {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background:white;
+    color: #262626;
+    border-radius: 50%;
+    text-decoration: none;
+    transition:  0.5s;
+}
+
+.box:hover .social-icon li a {
+    transform: translateY(-300px);
+    opacity: 1;
+}
+
+.scrolled .box:hover .social-icon li a {
+    opacity: 0;
+}
+
+.box:hover .social-icon li:nth-child(1) a {
+    transition-delay: 0s;
+}
+
+.box:hover .social-icon li:nth-child(2) a {
+    transition-delay: 0.2s;
+}
+
+.box:hover .social-icon li:nth-child(3) a {
+    transition-delay: 0.4s;
+}
+
+.box:hover .social-icon li:nth-child(4) a {
+    transition-delay: 0.6s;
+}
+
+.box:hover .social-icon li:nth-child(5) a {
+    transition-delay: 0.8s;
+}
+
+.details {
+    transition: 1s;
+}
+
+.box .details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    /* z-index: 2; */
+    opacity: 0;
+    visibility: hidden;
+}
+.box:hover .details {
+    opacity: 1;
+    visibility: visible;
+}
+.scrolled .details {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.details h2 {
+    text-align: center;
+    font-size: 2rem;
+    /* margin-bottom: 4px; */
+}
+
+.details h2 span {
+    /* color: #bbb; */
+    color: grey;
+    font-size: 1.5rem;
+}
+
 }
 
 /* ####################################################################################################### */
@@ -558,84 +855,207 @@ font-family: 'Sora', sans-serif; */
 /* Extra Large Devices */
 /* ####################################################################################################### */
 @media (min-width: 1200px) {
-
-    /* ######################################################################################### */
-    /* Center image */
-    /* ######################################################################################### */
-    .box{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 400px;
-        height: 500px;
-        /* background: #000; */
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,.3);
-        overflow: hidden;
+    /* ################ Nav Bar ########################## */
+    .main-nav{
+        min-height: 1200px;
     }
-    
-    .imgbox {
+    .nav-container {
+       position: fixed;
+       top: 0;
+       left: 0;
+       height: 100vh;
+       width: 100%;
+       transition: 1s;
+       padding: 0 10px;
+       /* background: #000; */
+    }
+    .scrolled {
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+    }
+    .nav-container .banner-image {
+        object-fit: cover;
         position: absolute;
-        transition: 0.5s;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 2;
-        background: #000000;
+        transition: 1s;
+        /* z-index: -2; */
     }
-    
-    .imgbox:hover {
-        transform: translateY(-100px);
+
+    .scrolled .banner-image {
+        opacity: 0.3;
+        height: 100px;
     }
+
+    .links-container {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .links-container .links {
+        position: relative;
+        margin: 0;
+        padding: 2rem 0;
+        display: flex;
+        transition: 1s;
+        opacity: 0;
+        transform: translateX(20rem);
+        visibility: hidden;
+    }
+
+    .scrolled .links-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .scrolled .links-container .links {
+        opacity: 1;
+        transform: translateX(0px);
+        visibility: visible;
+    }
+
+    .links-container .links li {
+        list-style: none;
+    }
+
+    .links-container .links .scroll-link {
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 0.8rem 1rem;
+        text-decoration: none;
+
+    }
+
+
+    /* ########### Hmaburger #################### */
+    .scrolled .nav-toggle {
+        font-size: 2.5rem;
+        color: snow;
+        background: transparent;
+        border-color: transparent;
+        transition: 1s;
+        cursor: pointer;
+    }
+
     
-    .imgbox img {
-        width: 580px;
+    /* ######################################################################################### */
+    /* Center image and scrolled effect uner it */
+    /* ######################################################################################### */
+    
+    .box-container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    .box {
+        position: relative;
+        width: 400px;
         height: 500px;
-        transform: translateX(-100px);
+        border-radius: 15px;
+        transition: 0.5s;
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+        background: #fff;
+        overflow: hidden;
+    }
+    
+    .scrolled .box {
+        /* opacity: 0;
+        visibility: hidden; */
+        /* position: relative; */
+        top: 50px;
+        left: 100px;
+        transition: 1s;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        /* justify-content: center; */
+    }
+
+    .imgbox {
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        /* z-index: 3; */
+    }
+    
+    .imgbox:hover{
+        transform: translateY(-100px);
+        
+    }
+    
+    .scrolled .imgbox:hover {
+        transform: translateY(0px);
+     }
+ 
+     .imgbox img {
+        width: auto;
+        height: 100%;
+        transform: translateX(-40px);
         transition: 0.5s;
     }
-    
+
+    .scrolled .box .imgbox img{
+        width: 130px;
+        height: auto;
+        transform: translateX(-30px);
+        transition: 1s;
+    }
+
     .box:hover .imgbox img {
-        opacity: 0.5;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+    .scrolled .box:hover .imgbox img{
+        opacity: 1;
     }
     
     .social-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
         display: flex;
-        margin: 0;
-        padding: 0;
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        border: 2px solid white;
     }
     
+    .scrolled .social-icon {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     .social-icon li{
         list-style: none;
     }
     
     .social-icon li a {
-        position: relative;
         display: flex;
         width: 50px;
         height: 50px;
         justify-content: center;
         align-items: center;
-        background: #fff;
+        background:white;
         color: #262626;
-        margin: 0 5px;
         border-radius: 50%;
         text-decoration: none;
         transition:  0.5s;
-        transform: translateY(200px);
-        opacity: 0;
     }
     
     .box:hover .social-icon li a {
-        transform: translateY(0px);
+        transform: translateY(-300px);
         opacity: 1;
+    }
+
+    .scrolled .box:hover .social-icon li a {
+        opacity: 0;
     }
     
     .box:hover .social-icon li:nth-child(1) a {
@@ -657,27 +1077,40 @@ font-family: 'Sora', sans-serif; */
     .box:hover .social-icon li:nth-child(5) a {
         transition-delay: 0.8s;
     }
-    /* h2{color: #fff;} */
+
     .details {
-        /* z-index: 1223; */
+        transition: 1s;
+    }
+
+    .box .details {
         position: absolute;
         bottom: 0;
         left: 0;
-        background: #fff;
         width: 100%;
         height: 100px;
-        padding: 10px;
-        box-sizing: border-box;
+        /* z-index: 2; */
+        opacity: 0;
+        visibility: hidden;
+    }
+    .box:hover .details {
+        opacity: 1;
+        visibility: visible;
+    }
+    .scrolled .details {
+        opacity: 0;
+        visibility: hidden;
     }
     
     .details h2 {
-        margin: 10px 0 0;
-        padding: 0;
         text-align: center;
+        font-size: 2rem;
+        /* margin-bottom: 4px; */
     }
     
     .details h2 span {
-        color: #bbb;
+        /* color: #bbb; */
+        color: grey;
+        font-size: 1.5rem;
     }
 
 }
