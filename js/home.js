@@ -1,4 +1,5 @@
 const header = document.querySelector('.nav-container');
+// const
 // height = 
 window.addEventListener('scroll', (e)=>{
     e.preventDefault();

@@ -1,6 +1,7 @@
 "use strict";
 
-var header = document.querySelector('.nav-container'); // height = 
+var header = document.querySelector('.nav-container'); // const
+// height = 
 
 window.addEventListener('scroll', function (e) {
   e.preventDefault();

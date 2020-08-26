@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demehin Ibukun Profile</title>
     <!-- stylesheet css files -->
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/home1.css">
     <!-- Javascript files -->
     <script src="js/home.js" defer></script>
     <!-- Animate on scroll stylesheet css-->
@@ -16,15 +16,58 @@
     <script src="https://kit.fontawesome.com/ec2c7e3e91.js" crossorigin="anonymous"></script>
     <!-- Google fonts  -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500&family=Recursive:wght@400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
+    <!-- Animate.css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 </head>
 <body>
     <main id="main">
         <!-- Nav Bar -->
-        <header class="main-nav">
+        <header class="main-nav" id="home">
             <div class="nav-container">
-                <img src="images/banner2.jpg" alt="" class="banner-image">
+                <div class="nav-header">
+                    <div class="image">
+                        <img src="images/image_logo3.jpg" class="logo" alt="">
+                    </div>
+                    
+                    <div class="header-content">
+                        <h2>Demehin <span>Ibukun</span></h2>
+                        <p>Data Scientist || <span>Software Developer</span></p>
+                        <div class="icons">
+                            <a href="#"><i class="fab fa-twitter    "></i></a>
+                            <a href="#"><i class="fab fa-facebook-f    "></i></a>
+                            <a href="#"><i class="fab fa-github    "></i></a>
+                            <a href="#"><i class="fab fa-instagram    "></i></a>
+                            <a href="#"><i class="fab fa-whatsapp   "></i></a>
+                        </div>
+                        
+                        
+                    </div>
+                    <button class="nav-toggle">
+                        <i class="fas fa-bars fa-2x  "></i>
+                    </button>
+                </div>
                 
-                <div class="box-container">
+                <!-- Links -->
+                <div class="links-container">
+                    <ul class="links">
+                        <li><a href="#home" id="nav-link" class="scroll-link"> Home</a></li>
+                        <li><a href="#About" class="scroll-link "> About</a></li>
+                        <li><a href="#Projects" class="scroll-link">Projects</a></li>
+                        <li><a href="#Experience" class="scroll-link">Experience</a></li>
+                        <li><a href="#Contact" class="scroll-link"> Contact Us</a></li>
+                    </ul>
+                    <div id="marker"></div>
+                </div>
+            </div>
+            <!-- <div id="home"></div> -->
+        </header>
+    </main>
+</body>
+</html>
+
+ <!-- <img src="images/banner2.jpg" alt="" class="banner-image"> -->
+                <!-- box image -->
+                <!-- <div class="box-container">
                     <div class="box">
                         <div class="imgbox">
                             <img src="images/Image_logo2.jpg" alt="" class="logo">
@@ -41,30 +84,5 @@
                         </div>
                         
                     </div>
-                </div>
-                
-                <!-- <div class="nav-header">
-                    <a href="" class="logo">
-                        <img src="image_logo.jpg" alt="">
-                    </a>
-                    <button class="nav-toggle">
-                        <i class="fas fa-bars fa-2x  "></i>
-                    </button>
                 </div> -->
-                
-                <div class="links-container">
-                    <ul class="links">
-                        <li><a href="#home" id="nav-link" class="scroll-link"> Home</a></li>
-                        <li><a href="#About" class="scroll-link "> About</a></li>
-                        <li><a href="#Projects" class="scroll-link">Projects</a></li>
-                        <li><a href="#Experience" class="scroll-link">Experience</a></li>
-                        <li><a href="#Contact" class="scroll-link"> Contact Us</a></li>
-                    </ul>
-                    <div id="marker"></div>
-                </div>
-            </div>
-            <div id="home"></div>
-        </header>
-    </main>
-</body>
-</html>
+                <!-- Hamburger -->
