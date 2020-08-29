@@ -1,23 +1,32 @@
 "use strict";
 
-var header = document.querySelector('.nav-container'); // const
-// height = 
+// All query selector
+var navContainer = document.querySelector('.nav-container');
+var navHeader = document.querySelector('.nav-header');
+var image = document.querySelector('.image');
+var headerContent = document.querySelector('.header-content');
+var navToggle = document.querySelector('.nav-toggle');
+var linksContainer = document.querySelector('.links-container');
+var links = document.querySelector('.links');
+var marker = document.querySelector('#marker'); // #######################################################################
+// Nav bar on scroll
+// ############################################################################
 
 window.addEventListener('scroll', function (e) {
   e.preventDefault();
   var height = window.pageYOffset;
+  console.log(height);
 
-  if (height > 0) {
-    // console.log(height);
-    header.classList.add('scrolled');
+  if (height > 10) {
+    navContainer.classList.add('fixed');
   } else {
-    header.classList.remove('scrolled');
+    navContainer.classList.remove('fixed');
   }
-});
-var navToggle = document.querySelector('.nav-toggle');
-var linksContainer = document.querySelector('.links-container');
-var links = document.querySelector('.links');
-console.log(navToggle);
+}); // console.log(navToggle);
+// ######################################################################
+// Nav toggle button
+// #########################################################################
+
 navToggle.addEventListener('click', function () {
   // linksContainer.classList.toggle('show-links')
   var containerHeight = linksContainer.getBoundingClientRect().height;
