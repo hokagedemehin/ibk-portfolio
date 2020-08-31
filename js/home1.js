@@ -9,7 +9,7 @@ window.addEventListener('scroll', (e)=>{
     const height = window.pageYOffset;
     const linksHeight = links.getBoundingClientRect().height;
     console.log('link height',linksHeight);
-    if (height > 0){
+    if (height > 20){
         header.classList.add('scrolled');
         // const barH = bar.getBoundingClientRect().height;
         //  header.style.height = `${barH}px`;
