@@ -156,7 +156,7 @@ font-family: 'Sora', sans-serif; */
     
     .nav-header .header-content {
         margin-left: 20px;
-        margin-top: 50px;
+        margin-top: 70px;
     }
     
     .nav-header .header-content h2 {
@@ -306,7 +306,7 @@ font-family: 'Sora', sans-serif; */
 /* About me */
 /* ######################################################################################### */
 .about__me {
-    margin-top: 200px;
+    margin-top: 250px;
 }
 
 .about__me .about_container {
