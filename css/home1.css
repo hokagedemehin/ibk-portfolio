@@ -129,11 +129,11 @@ font-family: 'Sora', sans-serif; */
         height: 100px;
         transition: 1s;
     }
-    
     .nav-container .nav-header .image {
         /* border: 2px orange solid; */
         position: relative;
         left: 30vw;
+        top: 8vh;
         margin-top: 20px;
         width: fit-content;
         background: #232427;
@@ -156,6 +156,7 @@ font-family: 'Sora', sans-serif; */
     
     .nav-header .header-content {
         margin-left: 20px;
+        margin-top: 50px;
     }
     
     .nav-header .header-content h2 {
@@ -186,7 +187,7 @@ font-family: 'Sora', sans-serif; */
         font-family: var(--ff-secondary);
         font-weight: 900;
         color: #232427;
-        text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 0.4),                
+        text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 1),                
                     -1.5px -1.5px 2px rgba(255, 255, 255, .07);
         transition: 1s;
     }
@@ -305,7 +306,7 @@ font-family: 'Sora', sans-serif; */
 /* About me */
 /* ######################################################################################### */
 .about__me {
-    margin-top: 250px;
+    margin-top: 200px;
 }
 
 .about__me .about_container {
