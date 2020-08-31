@@ -314,14 +314,14 @@ font-family: 'Sora', sans-serif; */
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 280px;
+    max-width: 95%;
     margin: 0 auto;
 }
 
 .about_card {
     /* border: 2px solid rebeccapurple; */
     position: relative;
-    margin: 10px 10px;
+    margin: 20px 10px;
     max-width: 95%;
     height: fit-content;
     display: flex;
@@ -478,6 +478,7 @@ font-family: 'Sora', sans-serif; */
         /* border: 2px orange solid; */
         position: relative;
         left: 30vw;
+        top: 8vh;
         margin-top: 40px;
         width: fit-content;
         background: #232427;
@@ -499,7 +500,7 @@ font-family: 'Sora', sans-serif; */
     }
     
     .nav-header .header-content {
-        margin-top: 20px;
+        margin-top: 70px;
         margin-left: 10vw;
     }
     
@@ -645,6 +646,87 @@ font-family: 'Sora', sans-serif; */
     .show-link .links-container .links li:nth-child(5){
         transition-delay: 0s;
     }
+
+/* ################################################################################## */
+/* About me */
+/* ######################################################################################### */
+.about__me {
+    margin-top: 300px;
+}
+
+.about__me .about_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.about_card {
+    /* border: 2px solid rebeccapurple; */
+    position: relative;
+    margin: 10px 10px;
+    max-width: 95%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+                -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.about_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1)
+}
+
+.about_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid white; */
+}
+.about_title {
+    font-size: 2.5rem;
+    font-family: var(--ff-secondary-p);
+    text-transform: capitalize;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.5);
+    /* border: 2px solid red; */
+}
+
+.about_content {
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+.about_p {
+    margin: 0.5rem 0;
+    margin-left: 0.5rem;
+    font-family: var(--ff-secondary);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.about__me .about_container .about_img {
+    width: 150px;
+    border-radius: 10%;
+    z-index: 10;
+}
+
 
 }
 
@@ -857,6 +939,88 @@ font-family: 'Sora', sans-serif; */
         opacity: 1;
         transition: 1s;
     }
+
+/* ################################################################################## */
+/* About me */
+/* ######################################################################################### */
+.about__me {
+    
+    margin-top: 250px;
+
+}
+
+.about__me .about_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about_card {
+    /* border: 2px solid rebeccapurple; */
+    position: relative;
+    margin: 10px 10px;
+    max-width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+                -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.about_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1)
+}
+
+.about_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid white; */
+}
+.about_title {
+    font-size: 3rem;
+    font-family: var(--ff-secondary-p);
+    text-transform: capitalize;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.5);
+    /* border: 2px solid red; */
+}
+
+.about_content {
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.about_p {
+    margin-left: 1rem;
+    font-family: var(--ff-secondary);
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.about__me .about_container .about_img {
+    width: 200px;
+    border-radius: 10%;
+}
+
 }
 
 /* ####################################################################################################### */
@@ -1068,6 +1232,87 @@ font-family: 'Sora', sans-serif; */
         opacity: 1;
         transition: 1s;
     }
+
+    /* ################################################################################## */
+/* About me */
+/* ######################################################################################### */
+.about__me {
+    
+    margin-top: 250px;
+
+}
+
+.about__me .about_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about_card {
+    /* border: 2px solid rebeccapurple; */
+    position: relative;
+    margin: 10px 10px;
+    max-width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+                -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.about_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1)
+}
+
+.about_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid white; */
+}
+.about_title {
+    font-size: 3rem;
+    font-family: var(--ff-secondary-p);
+    text-transform: capitalize;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.5);
+    /* border: 2px solid red; */
+}
+
+.about_content {
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 95%;
+    margin: auto;
+}
+
+.about_p {
+    margin-left: 1rem;
+    font-family: var(--ff-secondary);
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.about__me .about_container .about_img {
+    width: 300px;
+    border-radius: 10%;
+}
+
 }
 
 /* ####################################################################################################### */
@@ -1277,7 +1522,7 @@ font-family: 'Sora', sans-serif; */
 
 .links-container .links li a {
     color: #ffffff;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     padding: 10px 15px;
     text-decoration: none;
     font-family: var(--ff-primary-p);
@@ -1294,7 +1539,7 @@ font-family: 'Sora', sans-serif; */
 /* ######################################################################################### */
 .about__me {
     
-    margin-top: 170px;
+    margin-top: 250px;
 
 }
 
