@@ -16,7 +16,7 @@ window.addEventListener('scroll', (e)=>{
     e.preventDefault();
     const height = window.pageYOffset;
     console.log(height);
-    if (height > 10){
+    if (height > 100){
         
         navContainer.classList.add('fixed');
     } else {
