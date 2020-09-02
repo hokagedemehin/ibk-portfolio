@@ -18,6 +18,8 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500&family=Recursive:wght@400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
     <!-- Animate.css cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <!-- Animate on Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <main id="main">
@@ -69,21 +71,84 @@
             </div>
             <!-- <div id="home"></div> -->
         </header>
-
+        <!-- about me -->
         <section class="about__me" id="about">
             <div class="about_container">
                 <div class="about_card">
                     <div class="about_box">
                         <h1 class="about_title">about me</h1>
                         <div class="about_content">
-                            <img src="images/image_logo.jpg" alt="" class="about_img">
-                            <p class="about_p">I am a strongly committed and resourceful Data Analyst with an excellent record and success in data acquisition, interpretation and implementation as well as project coordination and scheduling. I have also applied myself in the field of web development through personal projects that have been deployed online</p>
+                            <img src="images/image_logo.jpg" data-aos="flip-left" data-aos-offset="300" alt="" class="about_img">
+                            <p class="about_p" data-aos="zoom-in-right" data-aos-duration="2000" >I am a strongly committed and resourceful Data Analyst with an excellent record and success in data acquisition, interpretation and implementation as well as project coordination and scheduling. I have also applied myself in the field of web development through personal projects that have been deployed online</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- projects -->
+        <div class="project-main">
+            <h1>My Projects</h1>
+            <div class="body_project large">
+                
+                <div class="card">
+                    <div class="face face1">
+                        <img src="images/parfait1.jpg" alt="">
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h2>Dharmie Parfait & Smoothies</h2>
+                            <p>
+                                This is a static website that provided information
+                                aboput the bussiness, the products and the brand. The website gacve customers 
+                                the opportunity to know more about the products that the company
+                                produces.
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+    
+                <div class="card">
+                    <div class="face face1">
+                        <img src="images/image_logo2.jpg" alt="">
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h2>Ibk Thoughts</h2>
+                            <p>
+                                A basic blog where I post what i have learnt in
+                                data science, web development and software engineering
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="face face1">
+                        <img src="images/parfait7.jpg" alt="">
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h2>Dharmie Parfait & Smoothies countdown</h2>
+                            <p>
+                                This was a basic countdown website prior to when the main site was to be completed,
+                                It could also serve as a placehiolder for customer to visit if at any point
+                                the main site was toi undergo any maintenance
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
     </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        
+    });
+  </script>
 </body>
 </html>
 

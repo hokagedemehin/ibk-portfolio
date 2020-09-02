@@ -306,7 +306,7 @@ font-family: 'Sora', sans-serif; */
 /* About me */
 /* ######################################################################################### */
 .about__me {
-    margin-top: 300px;
+    margin-top: 400px;
 }
 
 .about__me .about_container {
@@ -380,6 +380,106 @@ font-family: 'Sora', sans-serif; */
     width: 150px;
     border-radius: 10%;
     z-index: 10;
+}
+
+/* ################################################################################## */
+/* Projects */
+/* ######################################################################################### */
+
+.body_project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    row-gap: 30px;
+    width: 100%;
+    border: 2px green solid;
+}
+
+.body_project .card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border: 2px solid white;
+}
+
+.body_project .card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body_project .card .face.face1 {
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    transition-property: left, z-index, transform;
+    transition-delay: 0s, 0.5s, 0.5s;
+    transition-duration: 0.5s, 0s, 0.5s;
+    z-index: 2;
+    transform: translate(-10px, -10px);
+    border: 2px yellow solid;
+}
+
+.body_project .card:hover .face.face1 {
+    transition-property: transform, z-index, left;
+    transition-delay: 0s, 0.5s, 0.5s;
+    transition-duration: 0.5s, 0s, 0.5s;
+    transform: translate(60px, -10px);
+    border: 2px green solid;
+    z-index: 1;
+    left: -50px;
+}
+
+.body_project .card .face.face2 {
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    background: #111;
+    transition-property: left, z-index, transform;
+    transition-delay: 0s, 0.5s, 0.5s;
+    transition-duration: 0.5s, 0s, 0.5s;
+    z-index: 1;
+}
+
+.body_project .card:hover .face.face2 {
+    transition-property: transform, z-index, left;
+    transition-delay: 0s, 0.5s, 0.5s;
+    transition-duration: 0.5s, 0s, 0.5s;
+    transform: translateX(-50px);
+    z-index: 2;
+    left: 50px;
+}
+
+.face1 img {
+    min-width: 100%;
+    height: 100%;
+}
+
+.face2 .content {
+    padding: 10px;
+}
+
+.content h2, .content p {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-family: var(--ff-secondary-p);
+}
+
+.project-main h1{
+    font-size: 3rem;
+    font-family: var(--ff-secondary-p);
+    text-transform: capitalize;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin-top: 1rem;
 }
 
 }
@@ -945,7 +1045,7 @@ font-family: 'Sora', sans-serif; */
 /* ######################################################################################### */
 .about__me {
     
-    margin-top: 250px;
+    margin-top: 450px;
 
 }
 
@@ -1238,7 +1338,7 @@ font-family: 'Sora', sans-serif; */
 /* ######################################################################################### */
 .about__me {
     
-    margin-top: 250px;
+    margin-top: 450px;
 
 }
 
@@ -1539,7 +1639,7 @@ font-family: 'Sora', sans-serif; */
 /* ######################################################################################### */
 .about__me {
     
-    margin-top: 250px;
+    margin-top: 450px;
 
 }
 
@@ -1614,5 +1714,102 @@ font-family: 'Sora', sans-serif; */
     border-radius: 10%;
 }
 
+/* ################################################################################## */
+/* Projects */
+/* ######################################################################################### */
+
+.body_project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 15%;
+    padding: 40px;
+    row-gap: 30px;
+    width: 100%;
+    border: 2px green solid;
+}
+
+.body_project .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 2px solid white;
+}
+
+.body_project .card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body_project .card .face.face1 {
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    transition-property: left, z-index, transform;
+    transition-delay: 0s, 0.5s, 0.5s;
+    transition-duration: 0.5s, 0s, 0.5s;
+    z-index: 2;
+    transform: translate(-10px, -10px);
+}
+
+.body_project .card:hover .face.face1 {
+    transition-property: transform, z-index, left;
+    transition-delay: 0s, 0.5s, 0.5s;
+    transition-duration: 0.5s, 0s, 0.5s;
+    transform: translate(160px, -10px);
+    z-index: 1;
+    left: -150px;
+}
+
+.body_project .card .face.face2 {
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    background: #111;
+    transition-property: left, z-index, transform;
+    transition-delay: 0s, 0.5s, 0.5s;
+    transition-duration: 0.5s, 0s, 0.5s;
+    z-index: 1;
+}
+
+.body_project .card:hover .face.face2 {
+    transition-property: transform, z-index, left;
+    transition-delay: 0s, 0.5s, 0.5s;
+    transition-duration: 0.5s, 0s, 0.5s;
+    transform: translateX(-160px);
+    z-index: 2;
+    left: 160px;
+}
+
+.face1 img {
+    min-width: 100%;
+    height: 100%;
+}
+
+.face2 .content {
+    padding: 10px;
+}
+
+.content h2, .content p {
+    color: #ffffff;
+    font-family: var(--ff-secondary-p);
+}
+
+.project-main h1{
+    font-size: 3rem;
+    font-family: var(--ff-secondary-p);
+    text-transform: capitalize;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin-top: 1rem;
+}
 }
 
