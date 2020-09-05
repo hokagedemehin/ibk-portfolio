@@ -58,13 +58,12 @@ scrollLinks.forEach((link) => {
         // let position1 = position-85;
         if(!fixedNav){
             position = position;
-            console.log('fixed nav if');
         }
         if(navHeight>85){
             position = position - containerHeight;
         }
         window.scrollTo({left: 0,top:position});
-       header.style.height=0;
+       nav.style.height=0;
     });
 });
 
