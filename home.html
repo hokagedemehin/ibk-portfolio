@@ -6,8 +6,7 @@
     <meta name="owner" content="Demehin Ibukun">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demehin Ibukun Profile</title>
-    <!-- stylesheet css files -->
-    <link rel="stylesheet" href="css/home1.css">
+    
     <!-- Javascript files -->
     <script src="js/home1.js" defer></script>
     <!-- Animate on scroll stylesheet css-->
@@ -20,62 +19,69 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <!-- Animate on Scroll -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- stylesheet css files -->
+    <link rel="stylesheet" href="css/home1.css">
 </head>
 <body>
     <main id="main">
-        <!-- Nav Bar -->
-        <header class="main-nav" id="home">
-            <div class="nav-container" id="nav">
-                <!-- Banner -->
-                <div class="banner"></div>
-                <!-- Image and side info -->
-                <div class="nav-header">
-                    <div class="image">
-                        <img src="images/image_logo3.jpg" class="logo" alt="">
-                    </div>
-                    
-                    <div class="header-content">
-                        <!-- <h1 class="animate__animated animate__jello">An animated element</h1> -->
-                        <h2 class="animate__animated animate__bounceIn">Demehin <span>Ibukun</span></h2>
-                        <p>Data Scientist || <span>Software Developer</span></p>
-                        
-                        <div class="icons">
-                            <a href="https://twitter.com/hokage_demehin" target="_blank"><i class="fab fa-twitter    "></i></a>
-                            <a href="https://web.facebook.com/demehin.ibukun/" target="_blank"><i class="fab fa-facebook-f    "></i></a>
-                            <a href="https://github.com/hokagedemehin" target="_blank"><i class="fab fa-github    "></i></a>
-                            <!-- <a href="#"><i class="fab fa-instagram    "></i></a> -->
-                            <a href="https://wa.me/234803605141" target="_blank"><i class="fab fa-whatsapp   "></i></a>
-                            <a href="https://www.linkedin.com/in/ibukun-demehin/" target="_blank"><i class="fab fa-linkedin-in    "></i></a>
+         <!-- Nav Bar -->
+         <header class="main-nav">
+            <nav class="nav-container" id="nav">
+                <div class="nav-center">
+
+                    <div class="nav-header">
+                        <div class="nav-image">
+                            <div class="image">
+                                <img src="images/image_logo3.jpg" class="logo" alt="">
+                            </div>
+                            
+                            <div class="header-content">
+                                <!-- <h1 class="animate__animated animate__jello">An animated element</h1> -->
+                                <h2 class="animate__animated animate__bounceIn">Demehin <span>Ibukun</span></h2>
+                                <p>Data Scientist || <span>Software Developer</span></p>
+                                
+                                <div class="icons">
+                                    <a href="https://twitter.com/hokage_demehin" target="_blank"><i class="fab fa-twitter    "></i></a>
+                                    <a href="https://web.facebook.com/demehin.ibukun/" target="_blank"><i class="fab fa-facebook-f    "></i></a>
+                                    <a href="https://github.com/hokagedemehin" target="_blank"><i class="fab fa-github    "></i></a>
+                                    <!-- <a href="#"><i class="fab fa-instagram    "></i></a> -->
+                                    <a href="https://wa.me/234803605141" target="_blank"><i class="fab fa-whatsapp   "></i></a>
+                                    <a href="https://www.linkedin.com/in/ibukun-demehin/" target="_blank"><i class="fab fa-linkedin-in    "></i></a>
+                                </div>
+                                
+                            </div>
                         </div>
-                        
+                        <div class="button-wrapper">
+                            <button class="nav-toggle">
+                                <i class="fas fa-bars fa-2x  "></i>
+                            </button>
+                        </div>
                     </div>
                     
-                    <!-- <div class="button-wrapper">
-                        <button class="nav-toggle">
-                            <i class="fas fa-bars fa-2x  "></i>
-                        </button>
-                    </div> -->
-                </div>
-                <!-- Nav button -->
-                <div class="button-wrapper">
-                    <button class="nav-toggle">
-                        <i class="fas fa-bars fa-2x  "></i>
-                    </button>
-                </div>
-                <!-- Links -->
-                <div class="links-container">
-                    <ul class="links">
-                        <li><a href="#home" id="nav-link" class="scroll-link"> Home</a></li>
-                        <li><a href="#about" class="scroll-link "> About</a></li>
-                        <li><a href="#projects" class="scroll-link">Projects</a></li>
-                        <li><a href="#experience" class="scroll-link">Experience</a></li>
-                        <li><a href="#contact" class="scroll-link"> Contact Us</a></li>
-                    </ul>
-                    <div id="marker"></div>
+                    <div class="links-container">
+                        <ul class="links">
+                            <li><a href="#home" id="nav-link" class="scroll-link"> Home</a></li>
+                            <li><a href="#about" class="scroll-link "> About</a></li>
+                            <li><a href="#projects" class="scroll-link">Projects</a></li>
+                            <li><a href="#experience" class="scroll-link">Experience</a></li>
+                            <li><a href="#contact" class="scroll-link"> Contact Us</a></li>
+                        </ul>
+                        <!-- <div id="marker"></div> -->
+                    </div>
+                </div>  
+            </nav>
+        </header>
+        <!-- home placeholder -->
+        <section class="homepage" id="home">
+            <div class="homepage-container">
+                <div class="card">
+                    <img src="images/image_logo5.jpg" alt="">
+                    <div class="content">
+                        <h2>Demehin <span>Ibukun</span></h2>
+                    </div>
                 </div>
             </div>
-            <!-- <div id="home"></div> -->
-        </header>
+        </section>
         <!-- about me -->
         <section class="about__me" id="about">
             <div class="about_container">
@@ -90,63 +96,8 @@
                 </div>
             </div>
         </section>
-        <!-- projects z-index -->
-        <!-- <div class="project-main">
-            <h1>My Projects</h1>
-            <div class="body_project large">
-                
-                <div class="card">
-                    <div class="face face1">
-                        <img src="images/parfait1.jpg" alt="">
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <h2>Dharmie Parfait & Smoothies</h2>
-                            <p>
-                                This is a static website that provided information
-                                aboput the bussiness, the products and the brand. The website gacve customers 
-                                the opportunity to know more about the products that the company
-                                produces.
-                            </p>
-                        </div>
-                    </div> 
-                </div>
-    
-                <div class="card">
-                    <div class="face face1">
-                        <img src="images/image_logo2.jpg" alt="">
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <h2>Ibk Thoughts</h2>
-                            <p>
-                                A basic blog where I post what i have learnt in
-                                data science, web development and software engineering
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="card">
-                    <div class="face face1">
-                        <img src="images/parfait7.jpg" alt="">
-                    </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <h2>Dharmie Parfait & Smoothies countdown</h2>
-                            <p>
-                                This was a basic countdown website prior to when the main site was to be completed,
-                                It could also serve as a placehiolder for customer to visit if at any point
-                                the main site was toi undergo any maintenance
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div> -->
         <!-- Projects  -->
-        <div class="projects-toggle" id="projects">
+        <section class="projects-toggle" id="projects">
             <h1>My Projects</h1>
             <div class="toggle-body">
                 
@@ -207,7 +158,50 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- Experience -->
+        <section class="exp">
+            <div class="exp-container">
+                <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="content">
+                        <h2>01</h2>
+                        <h3>SBA Nigeira</h3>
+                        <h4>Data Analyst / Planning Coordinator</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam beatae voluptates possimus amet porro nihil, dolorum consequatur minus assumenda exercitationem.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="content">
+                        <h2>02</h2>
+                        <h3>SBA Nigeira</h3>
+                        <h4>Data Analyst / Planning Coordinator</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam beatae voluptates possimus amet porro nihil, dolorum consequatur minus assumenda exercitationem.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="content">
+                        <h2>01</h2>
+                        <h3>SBA Nigeira</h3>
+                        <h4>Data Analyst / Planning Coordinator</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam beatae voluptates possimus amet porro nihil, dolorum consequatur minus assumenda exercitationem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

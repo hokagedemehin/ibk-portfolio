@@ -28,7 +28,9 @@ font-family: 'Sora', sans-serif; */
     box-sizing: border-box;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 /* ###################################################################### */
 /* All Media Queries */
 /* ###################################################################### */
@@ -87,7 +89,6 @@ font-family: 'Sora', sans-serif; */
         flex-direction: column; */
         
     }
-
     /* ####################################################################################################### */
     /* image and side title - nav header and nav toggle*/
     /* ####################################################################################################### */
@@ -541,6 +542,7 @@ input:checked ~ .content.details {
     background: #fff;
     transition: 0.5s;
 }
+
 
 
 }

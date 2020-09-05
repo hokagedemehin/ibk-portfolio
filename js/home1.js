@@ -1,43 +1,36 @@
-const header = document.querySelector('.nav-container');
+const navContainer = document.querySelector('.nav-container');
+const navCenter = document.querySelector('.nav-center');
 const links = document.querySelector('.links');
-const bar = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.links-container');
-const barH = bar.getBoundingClientRect().height;
+const navToggle = document.querySelector('.nav-toggle');
+const linksContainer = document.querySelector('.links-container');
+const scrollLinks = document.querySelectorAll('.scroll-link');
        
 window.addEventListener('scroll', (e)=>{
-    // e.preventDefault();
     const height = window.pageYOffset;
     const linksHeight = links.getBoundingClientRect().height;
     console.log('link height',linksHeight);
-    if (height > 20){
-        header.classList.add('scrolled');
-        // const barH = bar.getBoundingClientRect().height;
-        //  header.style.height = `${barH}px`;
-        //  console.log('bar h inside', barH);
-        //  console.log(header.style.height);
-        //  header.style.height = `${linksHeight}px`;
-        // console.log(`header:`, header.style.height);
-        
+    if (height > 5){
+        navContainer.classList.add('scrolled');        
     } else {
-        header.classList.remove('scrolled');
-        header.classList.remove('show-link');
-        // header.style.height = `100vh`;
-        // console.log('ekse inside scroll');
+        navContainer.classList.remove('scrolled');
     }
-    // console.log(header.classList.contains('scrolled'));
-    
-    
 });
 
-bar.addEventListener('click', ()=> {
-    header.classList.toggle('show-link');
-    
+navToggle.addEventListener('click', ()=>{
+    const linksContainerHeight = linksContainer.getBoundingClientRect().height;
+    const linksHeight = links.getBoundingClientRect().height;
+    // console.log('linksHeight: ',linksHeight);
+    // console.log('containerheight: ', linksContainerHeight);
+    if(linksContainerHeight == 0) {
+        linksContainer.style.height = `${linksHeight}px`;
+    }
+    else {
+        linksContainer.style.height = `0px`;
+    }
 });
-
 // ********** smooth scroll ************
 // select links
 
-const scrollLinks = document.querySelectorAll('.scroll-link');
 scrollLinks.forEach((link) => {
     link.addEventListener('click', (e)=>{
         //prevent default scrolling
@@ -48,43 +41,28 @@ scrollLinks.forEach((link) => {
         const element = document.getElementById(id);
 
         // calculate the height
-        const navHeight = header.getBoundingClientRect().height;
-        const containerHeight = nav.getBoundingClientRect().height;
-        const fixedNav = header.classList.contains('fixed-nav');
+        const navHeight = navContainer.getBoundingClientRect().height;
+        const containerHeight = linksContainer.getBoundingClientRect().height;
+        const fixedNav = navContainer.classList.contains('scrolled');
 
         let position = element.offsetTop-navHeight;
-        console.log('offset: ', element.offsetTop, 'position: ', position, 'navheight: ', navHeight);
+        console.log('offset: ', element.offsetTop);
+        console.log('position: ', position);
+        console.log('navheight: ', navHeight);
+        console.log('containerHeight: ', containerHeight);
+        console.log('scrolled: ', fixedNav);
         // let position = element.offsetTop;
         // let position1 = position-85;
         if(!fixedNav){
-            position = position;
-            console.log('fixed nav if');
+            position = position - navHeight;
+            console.log('position inside fixednav: ', position);
         }
         if(navHeight>85){
-            position = position - containerHeight;
+            position = position + containerHeight - 25;
+            console.log('position inside navheight: ', position);
         }
         window.scrollTo({left: 0,top:position});
-       header.style.height=0;
+        //close navbar
+       linksContainer.style.height=0;
     });
 });
-
-
-// const containerHeight = linksContainer.getBoundingClientRect().height;
-// const linksHeight = links.getBoundingClientRect().height;
-// console.log(linksHeight);
-// console.log(containerHeight);
-
-
-// navToggle.addEventListener('click', ()=>{
-//     // linksContainer.classList.toggle('show-links')
-//     const containerHeight = linksContainer.getBoundingClientRect().height;
-//     const linksHeight = links.getBoundingClientRect().height;
-//     console.log(linksHeight);
-//     console.log(containerHeight);
-//     if(containerHeight === 0){
-//         linksContainer.style.height = `${linksHeight}px`;
-//     }
-//     else{
-//         linksContainer.style.height = 0;
-//     }
-// });
